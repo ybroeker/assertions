@@ -1,0 +1,7 @@
+language: java
+script: ./mvnw clean verify
+jdk:
+  - oraclejdk8
+  - oraclejdk9
+after_success:
+  - "[[ ${TRAVIS_PULL_REQUEST} == 'false' ]] && [[ ${TRAVIS_TAG} != '' ]] && mvn deploy -DskipTests --settings settings.xml"

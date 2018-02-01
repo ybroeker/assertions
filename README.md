@@ -1,4 +1,5 @@
 [ ![Download](https://api.bintray.com/packages/ybroeker/assertions/assertions/images/download.svg) ](https://bintray.com/ybroeker/assertions/assertions/_latestVersion)
+[![Build Status](https://travis-ci.org/ybroeker/assertions.svg?branch=master)](https://travis-ci.org/ybroeker/assertions)
 
 ## Usage
 
