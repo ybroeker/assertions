@@ -4,6 +4,7 @@
 
 ## Usage
 
+### assertions-json
 
 ```java
 import static de.ybroeker.assertions.json.JsonAssert.*;
@@ -12,9 +13,10 @@ assertThat("{\"field\":\"value\"}").jsonPathAsString("$.field").isEqualTo("value
 ```
 
 
+
 ## Dependency
 
-Add an Repository to your Repository-Section:
+Add the repository to your repository-Section:
 
 ```xml
 <repository>
@@ -27,13 +29,26 @@ Add an Repository to your Repository-Section:
 </repository>
 ```
 
-Add the Dependency
+
+Add the dependency
+
+### assertions-json
 
 ```xml
 <dependency>
   <groupId>de.ybroeker</groupId>
-  <artifactId>assertions</artifactId>
+  <artifactId>assertions-json</artifactId>
   <version>0.1</version>
-  <type>pom</type>
 </dependency>
 ```
+
+### assertions-comparator
+
+```xml
+<dependency>
+  <groupId>de.ybroeker</groupId>
+  <artifactId>assertions-comparator</artifactId>
+  <version>0.1</version>
+</dependency>
+```
+
