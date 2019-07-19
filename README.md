@@ -23,9 +23,9 @@ Add the repository to your repository-Section:
     <snapshots>
         <enabled>false</enabled>
     </snapshots>
-    <id>bintray-ybroeker-natternstube</id>
-    <name>bintray</name>
-     <url>http://dl.bintray.com/ybroeker/natternstube</url>
+    <id>bintray-ybroeker-assertions</id>
+    <name>bintray-ybroeker-assertions</name>
+     <url>http://dl.bintray.com/ybroeker/assertions</url>
 </repository>
 ```
 
