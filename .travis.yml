@@ -1,7 +1,11 @@
 language: java
-script: ./mvnw clean verify
+dist: xenial
 jdk:
-  - oraclejdk8
-  - oraclejdk9
+  - openjdk8
+  - openjdk11
+  - openjdk12
+  - openjdk13
+  - openjdk-ea
+script: ./mvnw clean verify -B
 after_success:
-  - "[[ ${TRAVIS_PULL_REQUEST} == 'false' ]] && [[ ${TRAVIS_TAG} != '' ]] && mvn deploy -DskipTests --settings settings.xml"
+  - "[[ ${TRAVIS_PULL_REQUEST} == 'false' ]] && [[ ${TRAVIS_TAG} != '' ]] && ./mvnw deploy -B -DskipTests --settings settings.xml"
