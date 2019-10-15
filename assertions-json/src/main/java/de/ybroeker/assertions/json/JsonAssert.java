@@ -1,5 +1,7 @@
 package de.ybroeker.assertions.json;
 
+import java.util.*;
+
 import com.jayway.jsonpath.DocumentContext;
 import com.jayway.jsonpath.JsonPath;
 import org.assertj.core.api.AbstractCharSequenceAssert;
@@ -28,6 +30,11 @@ public class JsonAssert extends AbstractCharSequenceAssert<JsonAssert, String> {
     @CheckReturnValue
     public JsonStringAssert jsonPathAsString(String path) {
         return new JsonStringAssert(this, documentContext.read(path, String.class));
+    }
+
+    @CheckReturnValue
+    public <KEY, VALUE> JsonMapAssert<KEY, VALUE> jsonPathAsMap(String path) {
+        return new JsonMapAssert<KEY,VALUE>(this, documentContext.read(path, Map.class));
     }
 
     @CheckReturnValue
