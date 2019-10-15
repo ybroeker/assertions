@@ -5,6 +5,7 @@ import com.jayway.jsonpath.JsonPath;
 import org.assertj.core.api.AbstractCharSequenceAssert;
 import org.assertj.core.util.CheckReturnValue;
 
+
 /**
  * @author ybroeker
  */
@@ -39,5 +40,9 @@ public class JsonAssert extends AbstractCharSequenceAssert<JsonAssert, String> {
         return new JsonDoubleAssert(this, documentContext.read(path, Double.class));
     }
 
+    @CheckReturnValue
+    public JsonBooleanAssert jsonPathAsBoolean(String path) {
+        return new JsonBooleanAssert(this, documentContext.read(path, Boolean.class));
+    }
 
 }
